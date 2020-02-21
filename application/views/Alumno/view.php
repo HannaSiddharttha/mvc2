@@ -14,7 +14,7 @@
   <body>
 
   <div style="margin-left: 40px;">
-		<font color="#545454" size="10" face="Arial">
+		<font color="#545454" size="10" face="Century Gothic">
 			<div style="margin: 30px 0px;">
 				<a href="<?php echo base_url(); ?>alumnos">Return</a>
 			</div>
