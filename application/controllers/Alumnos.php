@@ -2,6 +2,8 @@
 
 class Alumnos extends CI_Controller{
 
+//  HOLA K HACE 
+
   function __construct() {
       parent::__construct();
       $this->load->helper('form');
