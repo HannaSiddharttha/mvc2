@@ -14,7 +14,7 @@
   <body>
 
   <div style="margin-left: 40px;">
-		<font color="#545454" size="10" face="Century Gothic">
+		<font color="#545454" size="10" face="Arial">
 			<div style="margin: 30px 0px;">
 				<a href="<?php echo base_url(); ?>alumnos">Return</a>
 			</div>
@@ -22,7 +22,7 @@
   <font color="#545454"size="9" face="Century Gothic">
   <h5 style="margin: 10px 0px;"><b> <big>User Information</big></b> </h5>
   </font>
- <font color="#545454"size="5" face="Century Gothic"> 
+ <font color="#545454"size="5" face="Century Gothic">
     <?php
     echo "ID: {$dato['id']}<br>";
     echo $dato["nombre"]."<br>";
