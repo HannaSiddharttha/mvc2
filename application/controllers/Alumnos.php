@@ -8,6 +8,7 @@ class Alumnos extends CI_Controller{
       parent::__construct();
       $this->load->helper('form');
       $this->load->helper('url');
+      $this->load->model("Alumno");
   }
 
 //muestra todos los elementos
@@ -26,18 +27,8 @@ class Alumnos extends CI_Controller{
   }
 
   public function insert2() {
-    $nombre = $this->input->post('nombre');
-    $matricula = $this->input->post('matricula');
-
-    $data = array(
-      'nombre'=>$nombre,
-      'matricula'=>$matricula
-    );
-
-  $this->db->insert('alumnos', $data);
-
-  //return $this->index();
-  redirect(base_url()."alumnos");
+    $this->Alumno->insertar($id);
+    redirect(base_url()."alumnos");
   }
 
 //muestra un elemento en espe
@@ -61,30 +52,18 @@ class Alumnos extends CI_Controller{
 
 //metodo para actualizar
   public function update( $id = null ){
-
-    $id = $this->input->post('id');
-    $nombre = $this->input->post('nombre');
-    $matricula = $this->input->post('matricula');
-
-    $data = array(
-      'nombre'=>$nombre,
-      'matricula'=>$matricula
-    );
-
-    $this->db->update('alumnos', $data, array('id' => $id));
+    
+    $this->Alumno->actualizar($id);
     redirect(base_url()."alumnos");
+    
   }
 
   //metodo para Eliminar
   public function delete( $id = null ){
 
     if($id != null){
-
-      $this->load->helper("url");
-      $this->load->model("Alumno");
       $this->Alumno->eliminar($id);
       redirect(base_url()."alumnos");
-
     }
 
   }

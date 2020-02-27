@@ -29,9 +29,15 @@
 				<span>Complete the Form</span>
 
 				<div style="margin: 30px 0px;">
-					<span>Full Name</span>
+					<span>Name</span>
 					<input type="text" class="form-control ds-input" id="nombre" name="nombre">
 				</div>
+
+				<div style="margin: 30px 0px;">
+					<span>Last Name</span>
+					<input type="text" class="form-control ds-input" id="apellidos" name="apellidos">
+				</div>
+
 				<div style="margin: 30px 0px;">
 					<span>Student ID</span>
 					<input type="text" class="form-control ds-input" id="matricula" name="matricula">

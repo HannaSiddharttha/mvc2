@@ -20,14 +20,15 @@
   <table style="background: white;" border="1px" class="table">
     <tr>
       <th>ID</th>
-      <th>Full Name</th>
+      <th>Name</th>
+      <th>Last Name</th>
       <th>Student ID</th>
       <th>Options</th>
     </tr>
     <?php
       foreach ($datos as $alumno ) {
         echo "<tr>";
-         echo "<td>".$alumno->id."</td> <td>".$alumno->nombre. "</td> <td>".$alumno->matricula."</td><td> <a href='alumnos/view/".$alumno->id."' >View</a> <a href='alumnos/delete/".$alumno->id."'>Delete</a> <a href='alumnos/edit/".$alumno->id."'>Edit</a> </td>";
+         echo "<td>".$alumno->id."</td> <td>".$alumno->nombre. "</td><td>".$alumno->apellidos. "</td> <td>".$alumno->matricula."</td><td> <a href='alumnos/view/".$alumno->id."' >View</a> <a href='alumnos/delete/".$alumno->id."'>Delete</a> <a href='alumnos/edit/".$alumno->id."'>Edit</a> </td>";
          //echo "<td>".$alumno->id."</td> <td>".$alumno->nombre. "</td> <td>".$alumno->matricula."</td><td> <a href='view/".$alumno->id."' >Ver</a> <a href='delete/".$alumno->id."'>Eliminar</a> <a href='update/".$alumno->id."'>Editar</a> </td>";
          echo "</tr>";
       }

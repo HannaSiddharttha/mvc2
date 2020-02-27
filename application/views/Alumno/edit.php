@@ -24,16 +24,20 @@
 
 
   <font color="#545454"size="7" face="Century Gothic">
-  <form action="insert2" method="POST" enctype="multipart/form-data">
+  <form action="../update" method="POST" enctype="multipart/form-data">
 				<span>Complete the Form</span>
-
+				<input type="hidden" id="id" name="id" value="<?=$dato['id']?>">
 				<div style="margin: 30px 0px;">
 					<span>Name</span>
-					<input type="text" class="form-control ds-input" id="nombre" name="nombre">
+					<input type="text" class="form-control ds-input" id="nombre" name="nombre" value="<?php echo $dato['nombre'] ?>">
+				</div>
+				<div style="margin: 30px 0px;">
+					<span>Apellidos</span>
+					<input type="text" class="form-control ds-input" id="apellidos" name="apellidos" value="<?php echo $dato['apellidos'] ?>">
 				</div>
 				<div style="margin: 30px 0px;">
 					<span>Student ID</span>
-					<input type="text" class="form-control ds-input" id="matricula" name="matricula">
+					<input type="text" class="form-control ds-input" id="matricula" name="matricula" value="<?php echo $dato['matricula'] ?>">
 				</div>
 				<div style="margin: 30px 0px;">
 					<button class="btn btn-primary btn-lg">Edit</button>
